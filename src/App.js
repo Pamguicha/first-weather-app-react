@@ -6,27 +6,29 @@ import './App.css';
 
 
 export default function Weather(){
-  const [ready, setReady] = useState(false);
-  const [weatherData, setWeatherData] = useState({});
+ 
+  const [weatherData, setWeatherData] = useState({ready:false});
 
   function handleResponse(response){
 console.log(response.data);
 setWeatherData({
+  ready:true,
   temperature: response.data.main.temp,
   humidity: response.data.main.humidity,
   wind: response.data.wind.speed,
   pressure: response.data.main.pressure,
   city: response.data.name,
+  date: "Wednesday 08:48 am",
   description: response.data.weather[0].description,
   iconUrl: "https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/clear-day.svg"
 
 
 })
 
-setReady(true);
+
 }
 
-if(ready) {
+if(weatherData.ready) {
 
   return (
     <div className="city">
@@ -43,15 +45,15 @@ if(ready) {
           {weatherData.city}
         </p>
         <ul className="day-week">
-          <li className="dayHour"> Wednesday 08:48 am </li>
+          <li className="dayHour"> {weatherData.date} </li>
           <li className="dayDay">
             {" "}
-            <strong> _.capitalize{weatherData.description} </strong>
+            <strong> {weatherData.description} </strong>
           </li>
         </ul>
         <h1>
            <img className="icons-animated" 
-           alt="clear day" 
+           alt={weatherData.description} 
            src={weatherData.iconUrl}>
 
            </img>
