@@ -15,7 +15,10 @@ setWeatherData({
   temperature: response.data.main.temp,
   humidity: response.data.main.humidity,
   wind: response.data.wind.speed,
-  city: response.data.name
+  pressure: response.data.main.pressure,
+  city: response.data.name,
+  description: response.data.weather[0].description,
+  iconUrl: "https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/clear-day.svg"
 
 
 })
@@ -43,11 +46,15 @@ if(ready) {
           <li className="dayHour"> Wednesday 08:48 am </li>
           <li className="dayDay">
             {" "}
-            <strong> Clear Sky </strong>
+            <strong> _.capitalize{weatherData.description} </strong>
           </li>
         </ul>
         <h1>
-           <img className="icons-animated" alt="clear day" src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/clear-day.svg"></img>
+           <img className="icons-animated" 
+           alt="clear day" 
+           src={weatherData.iconUrl}>
+
+           </img>
           <span className="space"> {Math.round(weatherData.temperature)} </span>{" "}
           <span className="units">
             <a
@@ -70,7 +77,7 @@ if(ready) {
         <ul>
           <li className="density">
             <i className="fa-solid fa-umbrella"></i> Pressure:{" "}
-            <span className="pressure"> 10% </span>{" "}
+            <span className="pressure"> {weatherData.pressure} </span>{" "}
           </li>
           <li className="density">
             <i className="fa-solid fa-temperature-half"></i> Humidity:{" "}
