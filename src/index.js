@@ -8,6 +8,13 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
+      <footer>
+         <small>
+        <a className="open-source" href="https://github.com/Pamguicha/react-weather-app" target="_blank" rel="noopener noreferrer" >
+            Open-source code, </a>
+        by Pamela Mardones
+    </small>
+    </footer>
   </React.StrictMode>
 );
 

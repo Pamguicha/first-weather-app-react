@@ -1,0 +1,17 @@
+.temperature {
+  color: rgb(255, 255, 255);
+  border-spacing: 15px;
+  margin: 0 auto;
+  font-size: 20px;
+  border-collapse: separate;
+}
+
+td {
+  width: 73px;
+  text-align: center;
+  padding: 3px;
+}
+
+.icons-animated{
+    width: 60px;
+}

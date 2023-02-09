@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
+body {
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  font-family: "Quicksand", sans-serif;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p.intro {
+  color: rgb(255, 255, 255);
+  margin-bottom: 0 auto;
+  position: relative;
+  top: 20px;
+  font-weight: 400;
+  font-family: "Cabin", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.city {
+  border-radius: 77px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: rgb(34, 138, 137);
+  background-image: url(/public/img/clear.png);
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  top: 20px;
+  width: 700px;
+  min-width: 700px;
+  max-width: 700px;
+  padding: 20px;
+  box-shadow: 0px 0px 6px 0px grey;
+  box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+input[type="text"] {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  font-family: "Cabin", sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+input[type="submit"] {
+  color: rgb(255, 255, 255);
+  width: 14%;
+  padding: 12px 12px;
+  margin: 8px 3px;
+  background-color: #8a5cbc;
+  border: none;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  transition: all 200ms ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type="submit"].btn:hover {
+  opacity: 0.9;
+  cursor: pointer;
+  background-color: #01beff;
 }
+
+input[type="button"]{
+  color: rgb(255, 255, 255);
+  width: 14%;
+   padding: 12px 12px;
+    margin: 8px 2px;
+    background-color: #8a5cbc;
+    border: none;
+     cursor: pointer;
+     box-shadow: 5px 5px 10px rgba(0,0,0,0.3) ;
+      transition: all 200ms ease-in-out;
+       
+}
+
+input[type="button"].currentbar:hover {
+   opacity: 0.9;
+   cursor: pointer;
+   background-color: #01beff;
+}
+
+
+input[type="text"] {
+  font-size: 15px;
+  color: #0387a9;
+}
+
+
