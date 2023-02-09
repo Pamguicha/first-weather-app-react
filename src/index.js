@@ -10,7 +10,7 @@ root.render(
     <App />
       <footer>
          <small>
-        <a className="open-source" href="https://github.com/Pamguicha/react-weather-app" target="_blank" rel="noopener noreferrer" >
+        <a className="open-source" href="https://github.com/Pamguicha/first-weather-app-react" target="_blank" rel="noopener noreferrer" >
             Open-source code, </a>
         by Pamela Mardones
     </small>
