@@ -12,7 +12,7 @@ root.render(
          <small>
         <a className="open-source" href="https://github.com/Pamguicha/first-weather-app-react" target="_blank" rel="noopener noreferrer" >
             Open-source code, </a>
-        by Pamela Mardones
+        by Pamela Mardones 
     </small>
     </footer>
   </React.StrictMode>
