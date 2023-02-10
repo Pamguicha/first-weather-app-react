@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <App defaultCity = "Santiago" />
       <footer>
          <small>
         <a className="open-source" href="https://github.com/Pamguicha/first-weather-app-react" target="_blank" rel="noopener noreferrer" >
