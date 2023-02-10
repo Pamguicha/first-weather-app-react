@@ -9,6 +9,7 @@ import './App.css';
 export default function Weather(props){
  
   const [weatherData, setWeatherData] = useState({ready:false});
+  const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response){
 
@@ -29,13 +30,26 @@ setWeatherData({
 
 }
 
+function handleSubmit(event){
+  event.preventDefault();
+}
+
+function handleCityChange(event){
+setCity(event.target.value);
+alert (city);
+}
+
 if(weatherData.ready) {
 
   return (
     <div className="city">
   <p className="intro"> The weather app</p>
-   <form className="search-form">
-     <input type="text" placeholder="Enter your city here" />
+   <form onSubmit={handleSubmit} className="search-form">
+     <input 
+     type="text" 
+     placeholder="Enter your city here"
+     autoFocus ={true}
+     onChange={handleCityChange} />
        <input className="btn" type="submit" value="Search" />
         <input className="currentbar" type="button" value="Current" />
    </form>
@@ -46,7 +60,7 @@ if(weatherData.ready) {
   );
 } else {
   const apiKey = "5f472b7acba333cd8a035ea85a0d4d4c"
- let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
+ let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
  axios.get(apiUrl).then(handleResponse);
 
  return "Loading...";
