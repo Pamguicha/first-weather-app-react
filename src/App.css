@@ -33,7 +33,7 @@ p.intro {
   box-sizing: border-box;
 }
 
-input[type="text"] {
+input[type="search"] {
   width: 70%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -81,7 +81,7 @@ input[type="button"].currentbar:hover {
 }
 
 
-input[type="text"] {
+input[type="search"] {
   font-size: 15px;
   color: #0387a9;
 }

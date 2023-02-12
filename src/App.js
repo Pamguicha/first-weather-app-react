@@ -25,31 +25,36 @@ setWeatherData({
   iconUrl: "https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/clear-day.svg"
 
 
-})
-
-
+});
 }
+function search(){
+  const apiKey = "5f472b7acba333cd8a035ea85a0d4d4c"
+ let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+ axios.get(apiUrl).then(handleResponse);
+};
 
 function handleSubmit(event){
   event.preventDefault();
+  search();
 }
 
 function handleCityChange(event){
 setCity(event.target.value);
-alert (city);
 }
+
 
 if(weatherData.ready) {
 
   return (
     <div className="city">
   <p className="intro"> The weather app</p>
-   <form onSubmit={handleSubmit} className="search-form">
+   <form onSubmit={handleSubmit}  className="search-form">
      <input 
-     type="text" 
+     type="search" 
      placeholder="Enter your city here"
-     autoFocus ={true}
-     onChange={handleCityChange} />
+     autoFocus="on"
+     onChange = {handleCityChange}
+     />
        <input className="btn" type="submit" value="Search" />
         <input className="currentbar" type="button" value="Current" />
    </form>
@@ -59,10 +64,8 @@ if(weatherData.ready) {
     </div>
   );
 } else {
-  const apiKey = "5f472b7acba333cd8a035ea85a0d4d4c"
- let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
- axios.get(apiUrl).then(handleResponse);
 
+search();
  return "Loading...";
 
 }
