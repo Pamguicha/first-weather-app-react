@@ -21,7 +21,7 @@ return (
           </li>
         </ul>
         <h1>
-          <WeatherIcon code={props.data.icon} alt={props.data.description} />
+          <WeatherIcon code={props.data.icon}  />
           <span className="space"> {Math.round(props.data.temperature)} </span>{" "}
           <span className="units">
             <a
