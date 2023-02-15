@@ -6,6 +6,16 @@ export default function WeatherTemperature(props){
         event.preventDefault();
         setUnit("fahrenheit");
     }
+
+    function showCelsius(event){
+        event.preventDefault();
+        setUnit("celsius");
+
+    }
+    function fahrenheit (){
+return (props.celsius * 9) / 5 + 32;
+    }
+
     if (unit === "celsius") {
     return (
 <> 
@@ -20,7 +30,15 @@ export default function WeatherTemperature(props){
 </>
     );
     } else {
-        return "F";
+        return (
+<> 
+ <span className="space"> {Math.round(fahrenheit())} </span>
+          <span className="units">
+               <a href="/"
+              onClick={showCelsius}> °C </a> | °F 
+          </span>
+</>
+    );
     }
 
     } 

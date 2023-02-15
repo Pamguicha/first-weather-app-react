@@ -57,10 +57,15 @@ a {
   font-family: "Cabin", sans-serif;
 }
 
+a:hover{
+ color: rgb(14, 103, 111);
+}
+
 .units {
   position: relative;
   top: -32px;
   color: #490666;
+    font-size: 21px;
   text-decoration: none;
   background-color: transparent;
 }
