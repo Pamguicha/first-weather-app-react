@@ -2,7 +2,7 @@ import React from "react";
 import FormattedDate from './FormattedDate';
 import WeatherIcon from './WeatherIcon';
 import WeatherTemperature from "./WeatherTemperature";
-import Forecast from "./Forecast";
+
 
 export default function WeatherInfo(props){
 return (
@@ -44,7 +44,7 @@ return (
         </ul>
       </div>
     </div>
-    <Forecast />
+   
     
  
   

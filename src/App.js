@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import WeatherInfo from './WeatherInfo';
+import Forecast from "./Forecast";
 import axios from "axios";
 import './Main.css';
 import "./Forecast.css";
@@ -15,6 +16,7 @@ export default function Weather(props){
 
 setWeatherData({
   ready:true,
+  coordinates: response.data.coord,
   temperature: response.data.main.temp,
   humidity: response.data.main.humidity,
   wind: response.data.wind.speed,
@@ -59,6 +61,7 @@ if(weatherData.ready) {
         <input className="currentbar" type="button" value="Current" />
    </form>
    <WeatherInfo data={weatherData}/>
+    <Forecast coordinates={weatherData.coordinates} />
       
        
     </div>
