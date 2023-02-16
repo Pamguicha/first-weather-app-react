@@ -1,7 +1,7 @@
 import React, {useState} from "react";
-import WeatherIcon from "./WeatherIcon";
-import ForecastDay from "./ForecastDay";
 import axios from "axios";
+import ForecastDay from "./ForecastDay";
+
 
 
 export default function WeatherForecast(props){
@@ -12,6 +12,8 @@ export default function WeatherForecast(props){
 function handleResponse(response){
    setForecast(response.data.daily);
    setLoaded(true);
+
+
 }
 
 if (loaded) {
@@ -19,25 +21,8 @@ if (loaded) {
             <div>
       <span> 5-day forecast </span>
       <hr />
-      <ForecastDay />
-      <table className="temperature">
-        <tbody>
-          <tr>
-            <td> {forecast[0].dt}</td>
-          </tr>
-          <tr>
-           
-            <td>
-             <p className="forecastTemperature"> <b>{Math.round(forecast[0].temp.max)}°c</b></p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-          <WeatherIcon code={forecast[0].weather[0].icon}/>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <ForecastDay data ={forecast[0]}/>
+      
     </div>
   
     );

@@ -1,7 +1,42 @@
 import React from "react";
+import WeatherIcon from "./WeatherIcon";
 
 
 export default function WeatherForecastDay (props){
-    return "Hola"
+    function maxTemperature(){
+        let temperature =  Math.round(props.data.temp.max);
+        return `${temperature}°`;
+    }
+
+function day(){
+    let date = new Date(props.data.dt * 1000);
+    let day = date.getDay();
+    let days = ["Sun", "Tues", "Wed", "Thu", "Fri", "Sat"];
+
+    return days[day];
+
+}
+
+
+    return (  
+    <table className="temperature">
+        <tbody>
+          <tr>
+            <td> {day()}</td>
+          </tr>
+          <tr>
+           
+            <td>
+             <p className="forecastTemperature"> <b>{maxTemperature()}</b></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+          <WeatherIcon code={props.data.weather[0].icon}/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      );
     
 }
