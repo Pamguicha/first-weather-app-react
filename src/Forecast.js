@@ -21,7 +21,7 @@ if (loaded) {
       <hr />
       <table className="temperature">
         <tbody>
-      <ForecastDay data ={forecast[0]}/>
+      <ForecastDay data = {forecast[0]}/>
       </tbody>
       </table>
     </div>
