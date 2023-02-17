@@ -12,8 +12,6 @@ export default function WeatherForecast(props){
 function handleResponse(response){
    setForecast(response.data.daily);
    setLoaded(true);
-
-
 }
 
 if (loaded) {
@@ -21,8 +19,11 @@ if (loaded) {
             <div>
       <span> 5-day forecast </span>
       <hr />
+      <table className="temperature">
+        <tbody>
       <ForecastDay data ={forecast[0]}/>
-      
+      </tbody>
+      </table>
     </div>
   
     );

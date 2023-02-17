@@ -19,24 +19,57 @@ function day(){
 
 
     return (  
-    <table className="temperature">
-        <tbody>
+    <>
           <tr>
             <td> {day()}</td>
+               <td> {day()}</td>
+                  <td> {day()}</td>
+                     <td> {day()}</td>
+                     <td> {day()}</td>
           </tr>
           <tr>
-           
             <td>
              <p className="forecastTemperature"> <b>{maxTemperature()}</b></p>
+             
+            </td>
+              <td>
+             <p className="forecastTemperature"> <b>{maxTemperature()}</b></p>
+             
+            </td>
+                <td>
+             <p className="forecastTemperature"> <b>{maxTemperature()}</b></p>
+             
+            </td>
+                <td>
+             <p className="forecastTemperature"> <b>{maxTemperature()}</b></p>
+             
+            </td>
+                <td>
+             <p className="forecastTemperature"> <b>{maxTemperature()}</b></p>
+             
             </td>
           </tr>
+          
           <tr>
             <td>
           <WeatherIcon code={props.data.weather[0].icon}/>
             </td>
+             <td>
+          <WeatherIcon code={props.data.weather[0].icon}/>
+            </td>
+             <td>
+          <WeatherIcon code={props.data.weather[0].icon}/>
+            </td>
+             <td>
+          <WeatherIcon code={props.data.weather[0].icon}/>
+            </td>
+             <td>
+          <WeatherIcon code={props.data.weather[0].icon}/>
+            </td>
           </tr>
-        </tbody>
-      </table>
+          
+   
+    </>
       );
     
 }
