@@ -20,30 +20,23 @@ function day(){
 
     return (  
     <>
-          <tr>
-            <td> {day()}</td>
-             <td> {day()}</td>
-          </tr>
-          <tr>              
-                <td>
-             <p className="forecastTemperature"> <b>{maxTemperature()}</b></p>
-            
-            </td>
-                  <td>
-             <p className="forecastTemperature"> <b>{maxTemperature()}</b></p>
-            
-            </td>
-             </tr>
-             <tr>
-            <td>
-          <WeatherIcon code={props.data.weather[0].icon}/>
-            </td>
-              <td>
-          <WeatherIcon code={props.data.weather[0].icon}/>
-            </td>
+       <div className="column">
+          <div className="cell"> {day()} 
+          </div>
+            <div className="cell">  
+            <p className="forecastTemperature"> <b>{maxTemperature()}</b></p> 
+            </div>
+           <div className="cell"> 
+            <WeatherIcon code={props.data.weather[0].icon}/>
+           </div>
+           </div>
+      
+      
+         
+      
+      
           
-          </tr>
-          
+      
    
     </>
       );

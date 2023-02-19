@@ -8,7 +8,7 @@ export default function WeatherInfo(props){
 return (
 
    <div className="weatherInfo">
- <div className="container">
+ <div className="bigContainer">
       <div className="item">
         <p className="toptown" id="test">
           {props.data.city}

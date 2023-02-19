@@ -19,11 +19,16 @@ if (loaded) {
             <div>
       <span> 5-day forecast </span>
       <hr />
-      <table className="temperature">
-        <tbody>
+    <div className="container">
       <ForecastDay data = {forecast[0]}/>
-      </tbody>
-      </table>
+           <ForecastDay data = {forecast[1]}/>
+             <ForecastDay data = {forecast[2]}/>
+              <ForecastDay data = {forecast[3]}/>
+               <ForecastDay data = {forecast[4]}/>
+
+      </div>
+      
+    
     </div>
   
     );

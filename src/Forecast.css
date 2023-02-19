@@ -1,19 +1,24 @@
-.temperature {
-  color: rgb(255, 255, 255);
-  border-spacing: 10px;
-  margin: 0 auto;
-  font-size: 20px;
-  border-collapse: separate;
-}
-
-td {
-  width: 73px;
-  text-align: center;
-  padding: 3px;
-}
-
 
 .mainAnimated{
     width: 66px;
+}
+
+  .container {
+  display: grid; /* grid containers */
+  grid-template-columns: repeat(5, 1fr); /* four columns */
+  grid-template-rows: repeat(3, 1fr); /* four rows */
+  grid-auto-flow: column; /* in column direction */
+
+}
+
+.column {
+  display: contents; /* the child elements would be grid items */
+
+}
+
+.cell {
+  padding: 1px;
+  justify-self: center;
+  color: white;
 }
 
