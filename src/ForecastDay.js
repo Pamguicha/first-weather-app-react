@@ -23,10 +23,10 @@ function day(){
     
           <div className="cell"> {day()} 
           </div>
-            <div className="cell">  
+            <div className="cell middle">  
             <p className="forecastTemperature"> <b>{maxTemperature()}</b></p> 
             </div>
-           <div className="cell"> 
+           <div className="cell middle"> 
             <WeatherIcon code={props.data.weather[0].icon}/>
            </div>
     

@@ -8,6 +8,7 @@
   grid-template-columns: repeat(5, 1fr); /* four columns */
   grid-template-rows: repeat(3, 1fr); /* four rows */
   grid-auto-flow: column; /* in column direction */
+margin: 15px 55px;
 
 }
 
@@ -20,5 +21,12 @@
   padding: 1px;
   justify-self: center;
   color: white;
+  font-size: 20px;
+
+}
+
+.middle{
+margin-top: -15px;
+
 }
 
