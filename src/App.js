@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import WeatherInfo from './WeatherInfo';
 import Forecast from "./Forecast";
-import { ThreeDots } from "react-loader-spinner";
+import { ProgressBar } from "react-loader-spinner";
 import axios from "axios";
 import './Main.css';
 import "./Forecast.css";
@@ -75,16 +75,16 @@ if(weatherData.ready) {
 } else {
 
 search();
- return  <ThreeDots 
-height="80" 
-width="80" 
-radius="9"
-color="#4fa94d" 
-ariaLabel="three-dots-loading"
-wrapperStyle={{}}
-wrapperClassName=""
-visible={true}
- />
+ return  <p class="loader"> <ProgressBar
+  height="200"
+  width="200"
+  ariaLabel="progress-bar-loading"
+  wrapperStyle={{}}
+  wrapperClass="progress-bar-wrapper"
+  borderColor = '#8a5cbc'
+  barColor = '#51E5FF'
+/>
+</p>
 
 }
 
