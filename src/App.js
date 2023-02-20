@@ -61,8 +61,10 @@ if(weatherData.ready) {
         <input className="currentbar" type="button" value="Current" />
    </form>
    <WeatherInfo data={weatherData}/>
+      <span> 5-day forecast </span>
+      <hr />
     <Forecast coordinates={weatherData.coordinates} />
-      
+    
        
     </div>
   );

@@ -16,20 +16,21 @@ function handleResponse(response){
 
 if (loaded) {
   return (
-            <div>
-      <span> 5-day forecast </span>
-      <hr />
-    <div className="container">
-      <ForecastDay data = {forecast[0]}/>
-           <ForecastDay data = {forecast[1]}/>
-             <ForecastDay data = {forecast[2]}/>
-              <ForecastDay data = {forecast[3]}/>
-               <ForecastDay data = {forecast[4]}/>
-
+     <div className="container">
+    {forecast.map(function (dailyForecast, index) {
+      if (index < 5) {
+      return (
+           <div className="column" key={index}>
+  <ForecastDay data = {dailyForecast}/>
+</div>
+      );
+      }
+    })}
+    
       </div>
       
     
-    </div>
+
   
     );
     } else {

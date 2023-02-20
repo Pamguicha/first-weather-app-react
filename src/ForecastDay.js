@@ -20,7 +20,7 @@ function day(){
 
     return (  
     <>
-       <div className="column">
+    
           <div className="cell"> {day()} 
           </div>
             <div className="cell">  
@@ -29,7 +29,7 @@ function day(){
            <div className="cell"> 
             <WeatherIcon code={props.data.weather[0].icon}/>
            </div>
-           </div>
+    
       
       
          
