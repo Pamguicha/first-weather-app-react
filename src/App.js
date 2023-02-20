@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import WeatherInfo from './WeatherInfo';
 import Forecast from "./Forecast";
+import { ThreeDots } from "react-loader-spinner";
 import axios from "axios";
 import './Main.css';
 import "./Forecast.css";
@@ -65,6 +66,8 @@ if(weatherData.ready) {
       <span> 5-day forecast </span>
       <hr />
     <Forecast coordinates={weatherData.coordinates} />
+
+
     
        
     </div>
@@ -72,7 +75,16 @@ if(weatherData.ready) {
 } else {
 
 search();
- return "Loading...";
+ return  <ThreeDots 
+height="80" 
+width="80" 
+radius="9"
+color="#4fa94d" 
+ariaLabel="three-dots-loading"
+wrapperStyle={{}}
+wrapperClassName=""
+visible={true}
+ />
 
 }
 
