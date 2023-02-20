@@ -11,7 +11,7 @@ return (
  <div className="bigContainer">
       <div className="item">
         <p className="toptown" id="test">
-          {props.data.city}
+          {props.data.city}, {props.data.country}
         </p>
         <ul className="day-week">
           <li className="dayHour"> 
@@ -29,17 +29,16 @@ return (
       </div>
       <div className="item2">
         <ul>
-          <li className="density">
-            <i className="fa-solid fa-umbrella"></i> Pressure:{" "}
+          <li className="density"> Pressure:
             <span className="pressure"> {props.data.pressure} </span>{" "}
           </li>
           <li className="density">
-            <i className="fa-solid fa-temperature-half"></i> Humidity:{" "}
+            Humidity:
             <span className="humidityNumber"> {props.data.humidity} %</span>
           </li>
           <li className="density">
-            <i className="fa-solid fa-wind"></i> Wind:{" "}
-            <span className="speedWind">{props.wind}km/h</span>{" "}
+             Wind:
+            <span className="speedWind">{props.data.wind}km/h</span>{" "}
           </li>
         </ul>
       </div>
