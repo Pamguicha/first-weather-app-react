@@ -21,7 +21,7 @@ return (props.celsius * 9) / 5 + 32;
 <> 
  <span className="space"> {Math.round(props.celsius)} </span>
           <span className="units">
-              °C | 
+              °C  | 
               <a href="/"
               onClick={showFahrenheit}>
                 °F 

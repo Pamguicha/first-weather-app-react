@@ -46,7 +46,7 @@ input[type="search"] {
 input[type="submit"] {
   color: rgb(255, 255, 255);
   width: 14%;
-  padding: 12px 12px;
+  padding: 16px 12px;
   margin: 8px 3px;
   background-color: #8a5cbc;
   border: none;
@@ -64,7 +64,7 @@ input[type="submit"].btn:hover {
 input[type="button"]{
   color: rgb(255, 255, 255);
   width: 14%;
-   padding: 12px 12px;
+   padding: 16px 12px;
     margin: 8px 2px;
     background-color: #8a5cbc;
     border: none;

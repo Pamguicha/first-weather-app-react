@@ -55,6 +55,7 @@ a {
   font-size: 21px;
   font-weight: bold;
   font-family: "Cabin", sans-serif;
+  margin-left: 5px;
 }
 
 a:hover{
